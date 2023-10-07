@@ -55,8 +55,6 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         moveState = Sprinting() ? MoveState.Sprinting : MoveState.Walking;
-
-        Debug.Log(speed);
         CameraMovement();
     }
 
