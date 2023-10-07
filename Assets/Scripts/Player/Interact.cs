@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public float maxDistance = 3;
+    public float interactInterval = 0.1f;
 
     [SerializeField]
     public Tool tool;
@@ -28,8 +29,6 @@ public class Interact : MonoBehaviour
             Vector3 rayOrigin = cam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
 
             RaycastHit hit;
-
-            float interactInterval = 0.1f;
 
             if(Physics.Raycast(rayOrigin, transform.forward, out hit, maxDistance)) {
                 if((Time.time - lastInteract) < interactInterval) {
