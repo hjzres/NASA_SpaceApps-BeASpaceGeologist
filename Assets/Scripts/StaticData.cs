@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class StaticData : MonoBehaviour
@@ -10,4 +11,5 @@ public class StaticData : MonoBehaviour
     public static int WorldOne = 1;
 
     public static int WorldTwo = 2;
+
 }
