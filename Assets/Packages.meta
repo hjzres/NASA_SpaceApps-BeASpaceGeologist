@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 7f2e5a6cb29375641bf5883d980173e3
+<<<<<<<< HEAD:Assets/Packages.meta
+guid: 4b8836d94fc8d6a40870b20eb2fef384
+========
+guid: 4c77875b36b4ff04da94d6fbe985a01c
+>>>>>>>> Andrei:Assets/Art.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

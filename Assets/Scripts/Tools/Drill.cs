@@ -13,12 +13,10 @@ public class Drill : Tool {
     private AudioSource drillAudio;
     
 
-    private GameManager gameManager;
     private ParticleSystem.EmissionModule em;
 
     void Start() {
         drillEffects = Instantiate(drillEffectsPrefab);
-        gameManager = GameObject.FindObjectOfType<GameManager>();
         particles = drillEffects.GetComponent<ParticleSystem>();
 
         AudioSource[] allAudio = drillEffects.GetComponents<AudioSource>();
@@ -29,6 +27,25 @@ public class Drill : Tool {
     }
 
     public override void LeftClickHeld(Interact interact) {
+
+        RaycastHit hit;
+        if(interact.Raycast(out hit)) {
+            if(hit.transform.gameObject.CompareTag("mineable")) {
+
+                particles.transform.position = hit.point;
+                particles.transform.rotation = Quaternion.LookRotation(hit.normal);
+
+                em.enabled = true;
+                if(!crushAudio.isPlaying){
+                    crushAudio.Play();
+                }
+                
+                hit.transform.gameObject.GetComponent<Mineable>().Mine(speed * Time.deltaTime);
+            }
+        } else {
+            em.enabled = false;
+            crushAudio.Stop();
+        }
     }
 
     public override void LeftClick(Interact interact) {
