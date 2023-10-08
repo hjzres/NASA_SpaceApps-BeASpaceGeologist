@@ -14,4 +14,8 @@ public static class StaticData
     public static Vector2 mouseSensitivity = new Vector2(40, 40) * 5; 
 
     public static float xRotation, yRotation;
+
+    public static int volume = 100;
+
+    public static int fov = 60;
 }

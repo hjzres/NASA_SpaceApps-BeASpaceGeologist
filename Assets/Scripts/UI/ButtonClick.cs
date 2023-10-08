@@ -9,4 +9,12 @@ public class ButtonClick : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void loadPart(string part)
+    {
+        if (part.Equals("settings"))
+        {
+
+        }
+    }
 }
