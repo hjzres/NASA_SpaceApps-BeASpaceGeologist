@@ -209,8 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  particles: {fileID: 0}
-  audioPlayer: {fileID: 0}
+  drillEffectsPrefab: {fileID: 2281204639532539505, guid: e44a9abe7ce46f7c8aa13a442619c6f5, type: 3}
 --- !u!1 &8260595318809149975
 GameObject:
   m_ObjectHideFlags: 0
