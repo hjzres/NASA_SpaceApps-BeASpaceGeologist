@@ -13,17 +13,14 @@ public class Interact : MonoBehaviour
     private Camera cam;
     private float lastInteract = 0;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         cam = GetComponent<Camera>();
 
         tool = new DebugStick();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.GetMouseButtonDown(0)) {
             Vector3 rayOrigin = cam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
