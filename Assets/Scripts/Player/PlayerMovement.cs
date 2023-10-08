@@ -27,13 +27,13 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput, verticalInput;
 
-    Transform cam;
+    Camera cam;
     Collider playerObject;
     Rigidbody rigidBody;
 
     private void Start()
     {
-        cam = GameObject.Find("Player Cam").transform;
+        cam = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
         playerObject = GetComponentInChildren<Collider>();
         rigidBody = GetComponent<Rigidbody>();
 
@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         StaticData.xRotation -= mouseY;
         StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -90f, 90f);
 
-        cam.rotation = Quaternion.Euler(StaticData.xRotation, StaticData.yRotation, 0f);
+        cam.transform.rotation = Quaternion.Euler(StaticData.xRotation, StaticData.yRotation, 0f);
         transform.rotation = Quaternion.Euler(0f, StaticData.yRotation, 0f);
 
         float camFOV = cam.GetComponent<Camera>().fieldOfView;

@@ -12,15 +12,12 @@ public class Interact : MonoBehaviour
 
     private Camera cam;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         cam = GetComponentInChildren<Camera>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.GetMouseButton(0)) {
             tool.LeftClickHeld(this);

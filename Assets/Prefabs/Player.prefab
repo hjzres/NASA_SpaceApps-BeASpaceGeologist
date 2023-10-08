@@ -255,10 +255,9 @@ GameObject:
   - component: {fileID: 3057454253665704837}
   - component: {fileID: 994258228791059633}
   - component: {fileID: 449261318003783672}
-  - component: {fileID: 4242943022458434193}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,6 +322,10 @@ MonoBehaviour:
   speed: 2
   jumpForce: 3
   readyToJump: 0
+<<<<<<< Updated upstream
+=======
+  fov: 0
+  newFOV: 0
 --- !u!114 &4242943022458434193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,3 +340,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 3
   interactInterval: 0.1
+  tool: {fileID: 0}
+>>>>>>> Stashed changes
