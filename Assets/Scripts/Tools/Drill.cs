@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DebugStick : Tool {
     public override void LeftClick(RaycastHit hit) {
-        MonoBehaviour.Destroy(hit.transform.gameObject);
+        if(hit.gameObject.CompareTag("mineable")) {
+            MonoBehaviour.Destroy(hit.transform.gameObject);
+        }
     }
 }
