@@ -116,6 +116,8 @@ GameObject:
   - component: {fileID: 6933788833268727311}
   - component: {fileID: 2432185013039355697}
   - component: {fileID: 4362617153369623991}
+  - component: {fileID: 1651782900431678325}
+  - component: {fileID: 323990936544625789}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -179,6 +181,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91182e4a403de440837bb7f22dab2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1651782900431678325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950266739000028717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5217ea21cd7e5f28f9d339eef4a409b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 3
+  interactInterval: 0.1
+  tool: {fileID: 323990936544625789}
+--- !u!114 &323990936544625789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950266739000028717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f90f71b437c0d5db2dd4085c4b6bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  particles: {fileID: 0}
+  audioPlayer: {fileID: 0}
 --- !u!1 &8260595318809149975
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +223,6 @@ GameObject:
   - component: {fileID: 3320678780588972910}
   - component: {fileID: 8464640676965999747}
   - component: {fileID: 1742699117424280157}
-  - component: {fileID: 8575513131925923240}
   m_Layer: 0
   m_Name: Robot Cam
   m_TagString: Untagged
@@ -317,18 +348,3 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &8575513131925923240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8260595318809149975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5217ea21cd7e5f28f9d339eef4a409b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 3
-  interactInterval: 0.1
-  tool: {fileID: 0}
