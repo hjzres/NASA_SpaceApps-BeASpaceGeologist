@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &169621904 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8143303802021571983, guid: 3b9d4509a9b32c648b326f0c45a3d115, type: 3}
+  m_PrefabInstance: {fileID: 1275255283099949721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &281807941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1342,6 +1347,11 @@ Transform:
   - {fileID: 1956707364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1936544945 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7470615196793575959, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+  m_PrefabInstance: {fileID: 281807941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956707360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,13 +1481,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100056133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd2ed8e829e98c0499a2f5ae252d6d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  robot: {fileID: 0}
+  player: {fileID: 169621904}
+  robot: {fileID: 1936544945}
 --- !u!4 &2100056135
 Transform:
   m_ObjectHideFlags: 0
@@ -1501,7 +1511,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
     - target: {fileID: 3057454253665704837, guid: 3b9d4509a9b32c648b326f0c45a3d115, type: 3}
+=======
+    - target: {fileID: 4674886895322191364, guid: 3b9d4509a9b32c648b326f0c45a3d115, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674886895322191364, guid: 3b9d4509a9b32c648b326f0c45a3d115, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743697391831723061, guid: 3b9d4509a9b32c648b326f0c45a3d115, type: 3}
+>>>>>>> Stashed changes
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

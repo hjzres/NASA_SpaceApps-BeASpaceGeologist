@@ -51,10 +51,8 @@ public class RobotMovement : MonoBehaviour
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * StaticData.mouseSensitivity.x;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * StaticData.mouseSensitivity.y;
 
-        StaticData.yRotation += mouseX;
         StaticData.xRotation -= mouseY;
-
-        StaticData.yRotation = Mathf.Clamp(StaticData.yRotation, -50f, 50f);
+        StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
 
         gameManager.robot.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
 >>>>>>> Stashed changes
