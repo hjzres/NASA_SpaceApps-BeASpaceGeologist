@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class RobotMovement : MonoBehaviour
@@ -12,7 +11,12 @@ public class RobotMovement : MonoBehaviour
 
     float horizontalInput, verticalInput;
 
-    Transform cam;
+<<<<<<< Updated upstream
+    private void Start()
+    {
+        
+=======
+    GameManager gameManager;
     Rigidbody rigidBody;
 
     private void Start()
@@ -20,7 +24,7 @@ public class RobotMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        cam = GameObject.Find("Robot Cam").transform;
+        gameManager = FindObjectOfType<GameManager>();
         rigidBody = GetComponent<Rigidbody>();
     }
 
@@ -50,9 +54,9 @@ public class RobotMovement : MonoBehaviour
         StaticData.yRotation += mouseX;
         StaticData.xRotation -= mouseY;
 
-        StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
         StaticData.yRotation = Mathf.Clamp(StaticData.yRotation, -50f, 50f);
 
-        cam.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
+        gameManager.robot.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
+>>>>>>> Stashed changes
     }
 }
