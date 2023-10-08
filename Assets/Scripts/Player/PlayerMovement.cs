@@ -1,5 +1,4 @@
 using System.Linq;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,11 +15,13 @@ public class PlayerMovement : MonoBehaviour
 
     public static MoveState moveState;
 
-    public int speed; 
+    public int speed;
     
     [Range(0, 10)] public int jumpForce;
 
     public bool readyToJump;
+
+    public float fov, newFOV;
 
     private Vector3 moveDirection;
 
@@ -32,13 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         cam = GameObject.Find("Player Cam").transform;
         playerObject = GetComponentInChildren<Collider>();
         rigidBody = GetComponent<Rigidbody>();
 
+        fov = cam.GetComponent<Camera>().fieldOfView;
+        newFOV = fov + 5;
         rigidBody.freezeRotation = true;
         readyToJump = true;
     }
@@ -103,6 +103,26 @@ public class PlayerMovement : MonoBehaviour
 
         cam.rotation = Quaternion.Euler(StaticData.xRotation, StaticData.yRotation, 0f);
         transform.rotation = Quaternion.Euler(0f, StaticData.yRotation, 0f);
+
+        float camFOV = cam.GetComponent<Camera>().fieldOfView;
+
+        if (Sprinting()) 
+        {
+            if (camFOV <= newFOV)
+            {
+                camFOV += .1f;
+            }
+        }
+
+        else
+        {
+            if (camFOV >= fov)
+            {
+                camFOV -= .1f;
+            }
+        }
+
+        cam.GetComponent<Camera>().fieldOfView = camFOV;
     }
 
     private bool Sprinting() => Input.GetKey(KeyCode.LeftShift) && (verticalInput > 0 || horizontalInput != 0);
