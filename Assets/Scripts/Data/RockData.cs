@@ -8,22 +8,13 @@ public class RockData
 {
     public string name;
     public float durability;
-    public Rarity rarity;
+    public string[] facts;
 
-    public enum Rarity
-    {
-        Common,
-        Uncommon,
-        Rare,
-        Epic,
-        Legendary
-    }
-
-    public RockData(string rockName, float durability, int rarity)
+    public RockData(string rockName, float durability, string[] facts)
     {
         this.name = rockName;
         this.durability = durability;
-        this.rarity = (Rarity)rarity;
+        this.facts = facts;
     }
 
 
