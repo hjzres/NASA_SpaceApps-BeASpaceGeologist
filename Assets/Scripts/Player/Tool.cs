@@ -15,7 +15,7 @@ public class Tool : MonoBehaviour {
 
     }
 
-    public virual void RightClick(Interact interact) {
+    public virtual void RightClick(Interact interact) {
         
     }
 }
