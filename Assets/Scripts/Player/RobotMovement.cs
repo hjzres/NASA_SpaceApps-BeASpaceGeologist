@@ -11,11 +11,6 @@ public class RobotMovement : MonoBehaviour
 
     float horizontalInput, verticalInput;
 
-<<<<<<< Updated upstream
-    private void Start()
-    {
-        
-=======
     GameManager gameManager;
     Rigidbody rigidBody;
 
@@ -55,6 +50,5 @@ public class RobotMovement : MonoBehaviour
         StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
 
         gameManager.robot.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
->>>>>>> Stashed changes
     }
 }

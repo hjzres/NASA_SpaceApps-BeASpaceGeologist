@@ -16,27 +16,10 @@ public class Interact : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
-
-        tool = new DebugStick();
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0)) {
-            Vector3 rayOrigin = cam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
-
-            RaycastHit hit;
-
-            if(Physics.Raycast(rayOrigin, transform.forward, out hit, maxDistance)) {
-                if((Time.time - lastInteract) < interactInterval) {
-                    return;
-                }
-
-                lastInteract = Time.time;
-
-                tool.LeftClick(hit);
-                
-            }
-        }
+        
     }
 }
