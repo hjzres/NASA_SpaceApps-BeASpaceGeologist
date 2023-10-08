@@ -11,35 +11,32 @@ public class Interact : MonoBehaviour
     public Tool tool;
 
     private Camera cam;
-    private float lastInteract = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = GetComponent<Camera>();
-
-        tool = new DebugStick();
+        cam = GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) {
-            Vector3 rayOrigin = cam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
-
-            RaycastHit hit;
-
-            if(Physics.Raycast(rayOrigin, transform.forward, out hit, maxDistance)) {
-                if((Time.time - lastInteract) < interactInterval) {
-                    return;
-                }
-
-                lastInteract = Time.time;
-
-                tool.LeftClick(hit);
-                
-            }
+        if(Input.GetMouseButton(0)) {
+            tool.LeftClickHeld(this);
         }
+
+        if(Input.GetMouseButtonDown(0)) {
+            tool.LeftClick(this);
+        }
+
+        if(Input.GetMouseButtonUp(0)) {
+            tool.LeftClickUp(this);
+        }
+    }
+
+    public bool Raycast(out RaycastHit hit) {
+        Vector3 rayOrigin = cam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
+        return Physics.Raycast(rayOrigin, cam.transform.forward, out hit, maxDistance);
     }
 }
