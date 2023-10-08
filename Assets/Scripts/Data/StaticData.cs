@@ -76,4 +76,25 @@ public static class StaticData
                                             "Ilmenite is used in the production of titanium dioxide, which is used in the production of paint, sunscreen, and food coloring"
         })}
     };
+
+    public static Dictionary<string, int> worldOneObjective = new Dictionary<string, int>()
+    {
+        {"Aluminum", 15},
+        {"Copper", 12},
+        {"Iron", 9}
+    };
+
+    public static Dictionary<string, int> worldTwoObjective = new Dictionary<string, int>()
+    {
+        {"Gold", 15},
+        {"Titanium", 12},
+        {"Platinum", 9}
+    };
+
+    public static Dictionary<string, int> worldThreeObjective = new Dictionary<string, int>()
+    {
+        {"Magnetite", 15},
+        {"Chormite", 12},
+        {"Ilmenite", 9}
+    };
 }
