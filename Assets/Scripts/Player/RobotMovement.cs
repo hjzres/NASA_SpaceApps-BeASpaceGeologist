@@ -7,11 +7,6 @@ public class RobotMovement : MonoBehaviour
     [Header("Properties")]
     public const int speed = 3;
 
-    private Vector3 moveDirection;
-
-    float horizontalInput, verticalInput;
-
-    GameManager gameManager;
     Rigidbody rigidBody;
     Camera cam;
 
@@ -20,22 +15,21 @@ public class RobotMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        gameManager = FindObjectOfType<GameManager>();
         rigidBody = GetComponent<Rigidbody>();
         cam = GetComponentInChildren<Camera>();
     }
 
     private void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-
         CameraMovement();
     }
 
     private void FixedUpdate()
     {
-        moveDirection = -transform.forward * verticalInput;
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveDirection = -transform.forward * verticalInput;
         rigidBody.drag = 5f;
 
         rigidBody.AddForce(moveDirection * speed * 10, ForceMode.Force);
@@ -45,12 +39,18 @@ public class RobotMovement : MonoBehaviour
 
     void CameraMovement()
     {
-        // float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * StaticData.mouseSensitivity.x;
-        // float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * StaticData.mouseSensitivity.y;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * StaticData.mouseSensitivity.y;
 
-        // StaticData.xRotation -= mouseY;
-        // StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
+        float newRot = cam.transform.rotation.eulerAngles.x - mouseY;
+        if(newRot > 180) {
+            newRot -= 360;
+        }
+        newRot = Mathf.Clamp(newRot, -30, 30);
 
-        // cam.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
+        cam.transform.rotation = Quaternion.Euler(
+            newRot,
+            cam.transform.rotation.eulerAngles.y,
+            cam.transform.rotation.eulerAngles.z
+        );
     }
 }
