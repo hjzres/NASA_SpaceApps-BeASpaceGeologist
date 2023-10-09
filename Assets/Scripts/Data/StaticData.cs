@@ -12,7 +12,7 @@ public static class StaticData
 
     public static int WorldThree = 3;
 
-    public static int currentScene = 0;
+    public static int currentScene = 3;
 
     // Movement Properties
     public static Vector2 mouseSensitivity = new Vector2(40, 40) * 5; 
