@@ -30,6 +30,10 @@ public class Interact : MonoBehaviour
         if(Input.GetMouseButtonUp(0)) {
             tool.LeftClickUp(this);
         }
+
+        if(Input.GetMouseButtonDown(1)) {
+            tool.RightClick(this);
+        }
     }
 
     public bool Raycast(out RaycastHit hit) {
