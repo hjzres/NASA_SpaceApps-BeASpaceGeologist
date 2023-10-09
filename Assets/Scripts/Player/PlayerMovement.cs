@@ -33,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        cam = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        cam = GetComponentInChildren<Camera>();
         playerObject = GetComponentInChildren<Collider>();
         rigidBody = GetComponent<Rigidbody>();
 
