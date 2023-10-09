@@ -19605,6 +19605,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 409432, guid: a9c5cce8e6511a140ab24e9cdf6b0cee, type: 3}
   m_PrefabInstance: {fileID: 841727631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &854545885
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3135201572325590909, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533200852711597503, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 663.7975
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 207.93962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 720.2146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814943459803708312, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303495695892799778, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_Name
+      value: Robot With Tools
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427386226105887193, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7fd0ed2ac033f2941b81c9ad86ffd0de, type: 3}
 --- !u!1001 &859081556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53032,3 +53101,4 @@ SceneRoots:
   - {fileID: 1487982098}
   - {fileID: 13814067}
   - {fileID: 1810618810}
+  - {fileID: 854545885}
