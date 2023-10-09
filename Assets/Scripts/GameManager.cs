@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
-        robot = GameObject.FindGameObjectWithTag("Robot").GetComponentInChildren<Camera>();
+        // player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
+        // robot = GameObject.FindGameObjectWithTag("Robot").GetComponentInChildren<Camera>();
 
-        robot.gameObject.SetActive(false);
-        robot.transform.parent.GetComponent<RobotMovement>().enabled = false;
+        // robot.gameObject.SetActive(false);
+        // robot.transform.parent.GetComponent<RobotMovement>().enabled = false;
     }
 }

@@ -13,6 +13,7 @@ public class RobotMovement : MonoBehaviour
 
     GameManager gameManager;
     Rigidbody rigidBody;
+    Camera cam;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class RobotMovement : MonoBehaviour
 
         gameManager = FindObjectOfType<GameManager>();
         rigidBody = GetComponent<Rigidbody>();
+        cam = GetComponentInChildren<Camera>();
     }
 
     private void Update()
@@ -33,7 +35,7 @@ public class RobotMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveDirection = transform.forward * verticalInput;
+        moveDirection = -transform.forward * verticalInput;
         rigidBody.drag = 5f;
 
         rigidBody.AddForce(moveDirection * speed * 10, ForceMode.Force);
@@ -43,12 +45,12 @@ public class RobotMovement : MonoBehaviour
 
     void CameraMovement()
     {
-        float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * StaticData.mouseSensitivity.x;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * StaticData.mouseSensitivity.y;
+        // float mouseX = Input.GetAxisRaw("Mouse X") * Time.fixedDeltaTime * StaticData.mouseSensitivity.x;
+        // float mouseY = Input.GetAxisRaw("Mouse Y") * Time.fixedDeltaTime * StaticData.mouseSensitivity.y;
 
-        StaticData.xRotation -= mouseY;
-        StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
+        // StaticData.xRotation -= mouseY;
+        // StaticData.xRotation = Mathf.Clamp(StaticData.xRotation, -50f, 50f);
 
-        gameManager.robot.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
+        // cam.transform.rotation = Quaternion.Euler(StaticData.xRotation, transform.rotation.eulerAngles.y + StaticData.yRotation, 0f);
     }
 }

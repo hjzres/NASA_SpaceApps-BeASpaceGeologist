@@ -5,17 +5,11 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public float maxDistance = 3;
-    public float interactInterval = 0.1f;
 
     [SerializeField]
     public Tool tool;
 
-    private Camera cam;
-
-    private void Start()
-    {
-        cam = GetComponentInChildren<Camera>();
-    }
+    public Camera cam;
 
     private void Update()
     {

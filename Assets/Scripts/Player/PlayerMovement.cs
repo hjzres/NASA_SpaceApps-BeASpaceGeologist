@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        cam = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
+        cam = GetComponentInChildren<Camera>();
         playerObject = GetComponentInChildren<Collider>();
         rigidBody = GetComponent<Rigidbody>();
 

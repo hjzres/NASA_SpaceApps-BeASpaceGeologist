@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1550732569691841579}
   m_Layer: 0
   m_Name: Player Object
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,8 @@ GameObject:
   - component: {fileID: 6743697391831723061}
   - component: {fileID: 2033772819882042095}
   - component: {fileID: 6663365590549701133}
+  - component: {fileID: 4307510671801148323}
+  - component: {fileID: 3333262317247797926}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -187,6 +189,33 @@ MonoBehaviour:
   readyToJump: 0
   fov: 0
   newFOV: 0
+--- !u!114 &4307510671801148323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674886895322191364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5217ea21cd7e5f28f9d339eef4a409b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 3
+  tool: {fileID: 3333262317247797926}
+  cam: {fileID: 8143303802021571983}
+--- !u!114 &3333262317247797926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674886895322191364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d711449d9218c549c9da2ecb748994a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4743343117647544177
 GameObject:
   m_ObjectHideFlags: 0
