@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3303868}
   - component: {fileID: 2368066}
   - component: {fileID: -194406743947447294}
+  - component: {fileID: 3491630746521201678}
   m_Layer: 0
   m_Name: Rock_2_v3
   m_TagString: Untagged
@@ -106,3 +107,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 0dbadadc30f9b7e40a97777e423e6689, type: 3}
+--- !u!205 &3491630746521201678
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147034}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.04015851, y: -0.12752867, z: 0.19236135}
+  m_Size: 4.0830812
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.2
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2368066}
+  m_Enabled: 1

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4287587714868415289}
+  - component: {fileID: 6510183285869987791}
   m_Layer: 0
   m_Name: Crystaline Rock
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   - {fileID: 4009685338675635282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &6510183285869987791
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142502675554007277}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.27155423, y: 0.04954797, z: 0.31984866}
+  m_Size: 1.6520977
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.07900816
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2877359596706832189}
+  m_Enabled: 1
 --- !u!1001 &3472269743177008057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,6 +121,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 037aa8d8d0c826f47ac3316bd7fbe73f, type: 3}
+--- !u!23 &2877359596706832189 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 037aa8d8d0c826f47ac3316bd7fbe73f, type: 3}
+  m_PrefabInstance: {fileID: 3472269743177008057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4009685338675635282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 037aa8d8d0c826f47ac3316bd7fbe73f, type: 3}
